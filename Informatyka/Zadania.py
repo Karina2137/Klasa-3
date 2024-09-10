@@ -1,4 +1,4 @@
-\\Adres strony z zadaniami: tiny.pl/j08n-qy6
+#Adres strony z zadaniami: tiny.pl/j08n-qy6
 
 #def czy_podielna_przez_2(n):
 #    return n % 2 == 0
@@ -42,3 +42,25 @@ m = int(input("Podaj Liczbę: "))
 #         ilosc_dzielnikow += 1
 # print(ilosc_dzielnikow)
 
+#Zad.5
+import math
+
+def czy_pierwsza(n):
+    if n<2:
+        return False
+    for i in range(2,n):
+        if n%i==0: return False
+    return True
+
+# n = int(input("Podaj n: "))
+# for i in range(2, n+1):
+#     if n % i == 0 and czy_pierwsza(i):
+#         print(i)
+
+#Zad.6
+# a = int(input("Podaj a: "))
+# b = int(input("Podaj b: "))
+# if czy_pierwsza(a) and czy_pierwsza(b) and (math.ceil(a-b)==2 or math.ceil(b-a)==2): print(f"Liczby {a} i {b} są bliźniacze")
+# else: print(f"Liczby {a} i {b} nie są bliźniacze")
+
+#Zad.7
