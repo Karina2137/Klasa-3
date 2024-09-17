@@ -51,3 +51,37 @@ while n >1:
         n = n//czynnik
     czynnik+=1
 print(licz_pierwsze)
+
+#Zad.5
+from math import sqrt
+def czy_zlozona(n):
+    if n<2:
+        return False
+    p=int(sqrt(n))
+    for i in range(2, p+1):
+        if n%i==0:
+            return True
+    return False
+
+def suma_cyfr(n):
+    suma = 0
+    while n>0:
+        suma += n%10
+        n//=10
+    return suma
+def suma_cyfr_czynnikow(n):
+    czynnik = 24
+    suma = 0
+    while n > 1:
+        while n % czynnik == 0:
+            suma += suma_cyfr(czynnik)
+            n //= czynnik
+        czynnik += 1
+    return suma
+
+n = int(input())
+
+if czy_zlozona(n) and suma_cyfr(n) == suma_cyfr_czynnikow(n):
+    print("tak")
+else:
+    print("nie")
