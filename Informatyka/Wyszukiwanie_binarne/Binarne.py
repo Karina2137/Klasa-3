@@ -39,3 +39,21 @@ if czy_nie_malejaca(T,len(T)):
     print(wyszukiwanie_binarne_rek(T, a, 0, len(T)-1))
 else:
     print("Ciąd musi być uporządkowany")
+#Zad.3
+plik1 = open("ciagi.txt", "r")
+Ciagi1 = plik1.readlines()
+plik1.close()
+
+for ciag in Ciagi1:
+    C = list(map(int, ciag.split()))
+    if wyszukiwanie_binarne_rek(C, 10, 0, len(C) - 1):
+            print(C)
+#Zad.4
+plik2 = open("ciagi2.txt","r")
+n = int(plik2.readline().rstrip())
+for i in range(n):
+    d = int(plik2.readline().rstrip())
+    ciag = list(map(int,plik2.readline().split()))
+    if wyszukiwanie_binarne(ciag, 10, d):
+        print(ciag)
+plik2.close()
