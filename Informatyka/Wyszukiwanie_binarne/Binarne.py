@@ -81,3 +81,34 @@ plik2.close()
 #     print(wyszukiwanie_binarne_rek(T, a, 0, len(T)-1))
 # else:
 #     print("Ciąd musi być uporządkowany")
+# zad.7
+# n = 10
+# A=[0, 5, 99, 3, 7, 111, 13, 4, 24, 4, 8]
+# rozwiązanie: ↓
+#a)python
+# i = 1
+# while i<=n:
+#     if A[i]%2==0:
+#         w=A[i]
+#         break
+#     i=i+1
+# print(w)
+#b)pseudokod
+# i←1
+# dopóki i<= wykonuj:
+#     jeżeli A[i] mod 2 = 0 to:
+#         w← A[i]
+#         zwróć w i zakończ
+# i←i+1
+#c)inny sposób (lepiej punktowany)
+n = 10
+A=[0, 5, 99, 3, 7, 111, 13, 4, 24, 4, 8]
+lewy = 1
+prawy = n
+while lewy < prawy:
+    srodek = (lewy + prawy) // 2
+    if A[srodek]%2==1:
+        lewy = srodek + 1
+    else:
+        prawy = srodek
+w = A[lewy]
