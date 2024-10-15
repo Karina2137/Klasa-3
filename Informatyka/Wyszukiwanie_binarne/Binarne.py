@@ -57,3 +57,27 @@ for i in range(n):
     if wyszukiwanie_binarne(ciag, 10, d):
         print(ciag)
 plik2.close()
+
+# zad.5 (pseudokod)
+#def czy_nie_malejaca(T,n):
+#     for i in range(1,n+1):
+#         if T[i] > T[i+1]:
+#             return False
+#     return True
+# funkcja wyszukiwanie_binarne(T, a, n):
+#     lewy ← 1
+#     prawy ← n
+#     dopóki lewy<prawy wykonuj:
+#       srodek ← (lewy + prawy) div 2
+#       jeżeli T[srodek] < a to:
+#           lewy ← srodek +1
+#       w przeciwnym wypadku:
+#           prawy ← srodek
+#     zwróć T[lewy] = a i zakończ
+# T = list(map(int, input().split()))
+# T.insert(0, 0)
+# a = int(input())
+# if czy_nie_malejaca(T,len(T)-1):
+#     print(wyszukiwanie_binarne_rek(T, a, 0, len(T)-1))
+# else:
+#     print("Ciąd musi być uporządkowany")
