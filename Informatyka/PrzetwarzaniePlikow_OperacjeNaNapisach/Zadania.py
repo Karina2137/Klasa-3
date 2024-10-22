@@ -12,3 +12,15 @@ linia = plik2.readline()
 lista = list(map(str, linia.rstrip()))
 # print(f"Witaj {lista[2]} {lista[3]}")
 plik2.close()
+
+# zad.4
+plik = open("ciagi.txt", "r")
+suma = 0
+for linia in plik:
+    ilosc  = 0
+    linia = linia.split()
+    for i in range(len(linia)):
+        ilosc+=1
+    if ilosc % 2==0:
+        suma+=1
+print(suma)
