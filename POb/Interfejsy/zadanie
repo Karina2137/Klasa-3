@@ -18,3 +18,6 @@ posortowaną listę na konsoli, używając metody ToString() klasy Book.
 używając metod OrderBy, OrderByDescending i ThenBy z przestrzeni nazw
 System.Linq. Wyświetl posortowane listy na konsoli, używając metody ToString() klasy
 Book.
+Sortowanie według ceny:
+Sortowanie według daty publikacji:
+Sortowanie według autora:
