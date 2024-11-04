@@ -67,6 +67,20 @@ namespace ConsoleApp3
                 Console.WriteLine(book);
             }
             Console.WriteLine();
+            Console.WriteLine("Lista książek posortowanych według ceny nierosnąco a następnie według roku od najstarszej książki");
+            var sortByPriceAndYear = books.OrderByDescending(a => a.price).ThenBy(a => a.yearOfPublication);
+            foreach (Book book in sortByPriceAndYear)
+            {
+                Console.WriteLine(book);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Lista książek które najpierw sortuje książki według ceny malejąco, następnie według roku publikacji rosnąco, a na końcu według autora alfabetycznie");
+            var sortByPriceYearAndAuthor = books.OrderByDescending(a => a.price).ThenBy(a => a.yearOfPublication).ThenBy(a => a.author);
+            foreach (Book book in sortByPriceAndYear)
+            {
+                Console.WriteLine(book);
+            }
+
             Console.ReadKey();
         }
     }
