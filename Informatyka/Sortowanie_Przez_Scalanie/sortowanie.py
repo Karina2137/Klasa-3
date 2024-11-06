@@ -78,3 +78,11 @@ plik.write(" ".join(map(str, wynik)))
 # for e in wynik:
 #     s += str(e)
 # print(s[:-1])
+
+#Zad.3
+import random
+liczby = [random.randint(1,1000000) for i in range(1000000)]
+liczby = sortowanie_przez_scalanie(liczby)
+with open("wyniki_3.txt", "w") as plik:
+    for e in liczby:
+        plik.write(f"{e}\n")
