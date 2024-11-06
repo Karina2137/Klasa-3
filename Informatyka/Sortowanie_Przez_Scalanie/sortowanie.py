@@ -31,6 +31,8 @@
 #
 # T = list(map(int,input().split(" ")))
 # sortuj(T,0,len(T)-1)
+
+#Zad.1
 def scal(t1,t2):
     wynik = []
     i=0
@@ -62,3 +64,17 @@ liczby = list(map(int, ciag.split()))
 print(liczby)
 liczby = sortowanie_przez_scalanie(liczby)
 print(liczby)
+
+#zad.2
+plik = open("ciagi.txt", "r")
+k = plik.readline()
+k = list(map(int,k.split()))
+l = plik.readline()
+l = list(map(int, l.split()))
+wynik = scal(k,l)
+plik = open("wyniki_2.txt","w")
+plik.write(" ".join(map(str, wynik)))
+# s = ""
+# for e in wynik:
+#     s += str(e)
+# print(s[:-1])
