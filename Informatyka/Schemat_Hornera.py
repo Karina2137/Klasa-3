@@ -13,7 +13,7 @@ print(y)
 B = list(map(int, input("Podaj współczynniki od a0 do an: ").split()))
 a = float(input("Podaj x: "))
 n = len(B)-1
-b = B[0]
+b = B[n]
 for i in range(n-1,-1,-1):
     b = a*b+B[i]
     print(b)
