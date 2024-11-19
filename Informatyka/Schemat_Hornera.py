@@ -30,3 +30,16 @@ B = list(map(int, input("Podaj współczynniki od a0 do an: ").split()))
 a = float(input("Podaj x: "))
 w = Schemat_Hornera(B,a)
 print(w)
+
+#zad.4  
+#Przykład 1 Ze zmienioną specyfikacją
+y ← A[n]
+potega ← 1
+dla i ← n-1, n-2,..., 0 wykonuj
+    potega ← potega * x
+    y ← y + A[i] * potega
+
+#Przykład 2 Ze zmienioną specyfikacją
+y ← A[0]
+dla i ← 1, 2,..., n wykonuj
+y ← x * y + A[i]
