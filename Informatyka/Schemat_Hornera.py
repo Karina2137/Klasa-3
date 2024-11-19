@@ -43,3 +43,24 @@ dla i ← n-1, n-2,..., 0 wykonuj
 y ← A[0]
 dla i ← 1, 2,..., n wykonuj
 y ← x * y + A[i]
+
+#zad.5 
+# Przykład1
+A = list(map(int, input("Podaj współczynniki od an do a0: ").split()))
+x = float(input("Podaj x: "))
+n = len(A)-1
+y = A[n]
+potega = 1
+for i in range(n-1,-1,-1):
+    potega = potega * x
+    y = y + A[i] * potega
+print(y)
+
+# Przykład2
+A = list(map(int, input("Podaj współczynniki od an do a0: ").split()))
+x = float(input("Podaj x: "))
+n = len(A)-1
+y = A[0]
+for i in range(1,n+1):
+    y = x*y + A[i]
+print(y)
