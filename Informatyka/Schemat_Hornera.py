@@ -64,3 +64,19 @@ y = A[0]
 for i in range(1,n+1):
     y = x*y + A[i]
 print(y)
+
+#zad.6
+x = input("Podaj liczbę binarną: ")
+wynik = 0
+for i in range(len(x)):
+    wynik = wynik*2+int(x[i])
+print(wynik)
+
+
+#zad.7
+p = int(input("Podaj podstawę systemu: "))
+x = input("Podaj liczbę w systemie o podanej podstawie : ")
+wynik = 0
+for i in range(len(x)):
+    wynik = wynik*p+int(x[i])
+print(wynik)
