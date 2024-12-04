@@ -98,3 +98,24 @@ for i in range(1,n):
     else:
         aktualna_dludosc=1
 print(maks_dlugosc)
+
+#zad.12
+plik = open('liczby.txt', 'r')
+ciag = list(map(int,plik.read().split()))
+plik.close()
+
+aktualna_dludosc = 1
+maks_dlugosc = 0
+n = len(ciag)
+index_pocz_akt = 0
+index_pocz_maks = 0
+for i in range(1,n):
+    if ciag[i]>=ciag[i-1]:
+        aktualna_dludosc+=1
+        if aktualna_dludosc>maks_dlugosc:
+            maks_dlugosc=aktualna_dludosc
+            index_pocz_maks = index_pocz_akt
+    else:
+        aktualna_dludosc=1
+        index_pocz_akt = i
+print(maks_dlugosc, ciag[index_pocz_maks:index_pocz_maks + maks_dlugosc])
