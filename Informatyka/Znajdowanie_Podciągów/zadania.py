@@ -119,3 +119,28 @@ for i in range(1,n):
         aktualna_dludosc=1
         index_pocz_akt = i
 print(maks_dlugosc, ciag[index_pocz_maks:index_pocz_maks + maks_dlugosc])
+
+#Zadanie maturalne
+#zad3.1
+plik = open("pi.txt", "r")
+LiczbyPi = list(map(int, plik.read().split()))
+plik.close()
+for i in range(90):
+    liczba = LiczbyPi[i] * 10 + LiczbyPi[i + 1]
+    
+    if liczba > 90:
+        print(liczba)
+
+#zad3.2
+T = [0] * 100
+
+for i in range(len(LiczbyPi) - 1):
+    liczba = LiczbyPi[i] * 10 + LiczbyPi[i + 1]
+    T[liczba] += 1
+maks = max(T)
+mini = min(T)
+if T.index(mini) > 10:
+    print(f"Najmniej wystąpień ma: {T.index(mini)} {mini}")
+else:
+    print(f"Najmniej wystąpień ma: 0{T.index(mini)} {mini}")
+print(f"Najwięcej wystąpień ma: {T.index(maks)} {maks}")
