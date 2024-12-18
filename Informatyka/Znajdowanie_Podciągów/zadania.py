@@ -144,3 +144,46 @@ if T.index(mini) > 10:
 else:
     print(f"Najmniej wystąpień ma: 0{T.index(mini)} {mini}")
 print(f"Najwięcej wystąpień ma: {T.index(maks)} {maks}")
+
+
+#zad3.4
+
+def  czy_rosnaco_malejaca(ciag):
+    czy_maleje = False
+    n = len(ciag)
+    if n < 4 or ciag[2]<=ciag[1]:
+        return False
+    for i in range(1,n-1):
+        if ciag[i+1]>ciag[i]:
+            if czy_maleje:
+                return False
+        elif ciag[i+1]<ciag[i]:
+            czy_maleje=True
+        else:
+            if czy_maleje==False:
+                czy_maleje=True
+            else:
+                return True
+    return True
+            
+
+n = len(LiczbyPi)
+for i in range (n):
+    j=i+4
+    while czy_rosnaco_malejaca(LiczbyPi[i:j]):
+        if j>=
+        
+        
+# trydny sposób(niedokończony)
+# czy_rosnie = True
+# fragment = [LiczbyPi[0]]
+# n = len(LiczbyPi)
+# for i in range (1, n):
+#     if czy_rosnie and LiczbyPi[-1] > fragment[-1]:
+#         fragment.append(LiczbyPi[i])
+#     else:
+#         czy_rosnie=False
+#         fragment.append(LiczbyPi[i])
+#     if  !czy_rosnie and LiczbyPi[i] < fragment[-1]:
+#         fragment.append(LiczbyPi[i])
+#     else:
