@@ -147,7 +147,6 @@ print(f"Najwięcej wystąpień ma: {T.index(maks)} {maks}")
 
 
 #zad3.4
-
 def  czy_rosnaco_malejaca(ciag):
     czy_maleje = False
     n = len(ciag)
@@ -166,24 +165,28 @@ def  czy_rosnaco_malejaca(ciag):
                 return True
     return True
             
+plik = open("pi.txt", "r")
+ciag = list(map(int, plik.read().split()))
+plik.close()
 
-n = len(LiczbyPi)
-for i in range (n):
-    j=i+4
-    while czy_rosnaco_malejaca(LiczbyPi[i:j]):
-        if j>=
-        
-        
-# trydny sposób(niedokończony)
-# czy_rosnie = True
-# fragment = [LiczbyPi[0]]
-# n = len(LiczbyPi)
-# for i in range (1, n):
-#     if czy_rosnie and LiczbyPi[-1] > fragment[-1]:
-#         fragment.append(LiczbyPi[i])
-#     else:
-#         czy_rosnie=False
-#         fragment.append(LiczbyPi[i])
-#     if  !czy_rosnie and LiczbyPi[i] < fragment[-1]:
-#         fragment.append(LiczbyPi[i])
-#     else:
+n = len(ciag)
+maksimum = 3
+poczatek = 0
+poczatek_maks = 0
+koniec_maks = 0
+czy_rosnie = True
+for i in range(1,n):
+    if not ciag[i]>ciag[i-1]:
+        czy_rosnie = False
+    else:
+        if ciag[i] > ciag[i - 1]:
+            czy_rosnie = True
+            print(ciag[poczatek:i])
+            if czy_rosnąco_malejący(ciag[poczatek:i]):
+                if i-poczatek > maksimum:
+                    maksimum = i-poczatek
+                    poczatek_maks=poczatek
+                    koniec_maks = i-1
+            poczatek=i-1
+print(poczatek_maks+1)
+print(*ciag[poczatek_maks:koniec_maks+1],sep="")
