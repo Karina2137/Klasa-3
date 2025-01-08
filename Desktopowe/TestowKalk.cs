@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WinFormsApp1
+{
+    public class Kalk
+    {
+        public int dodaj(int a, int b)
+        {
+            return a + b;
+        }
+    }
+}
+//klasa programu
