@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace WinFormsApp1
+namespace ToDo3
 {
     public partial class Form1 : Form
     {
@@ -20,11 +20,30 @@ namespace WinFormsApp1
             }
             else
             {
+                int reszty = 0;
                 int cyfra = int.Parse(liczba);
-                while ( cyfra > 0 )
+                while (cyfra>0)
                 {
                     int kon = cyfra % 100;
-                    kon%=
+                    while (kon>=7)
+                    {
+                        kon -= 7;
+                    }
+                    reszty += kon;
+                    kon = 0;
+                    cyfra /= 100;
+                }
+                while (reszty>=7)
+                {
+                    reszty-= 7;
+                }
+                if (reszty == 0)
+                {
+                    label1.Text = $"Liczba {liczba} jest podzielna przez 7";
+                }
+                else
+                {
+                    label1.Text = $"Liczba {liczba} nie jest podzielna przez 7";
                 }
             }
         }
