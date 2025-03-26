@@ -1,15 +1,19 @@
 W pozycyjnych systemach liczbowych każda cyfra ma swoją wagę zależną od pozycji, na której się znajduje. Przykładowo w systemie dziesiętnym mamy:
 123,4510 = 1*102+2*101+3*100+4*10-1+5*10-2
 Jeżeli mamy liczbę zapisaną w innym systemie liczbowym, to w powyższym zapisie wystarczy w powyższym zamienić liczbę 10 na odpowiednią podstawę systemu.
+
 Przykład 1
 Zamień liczbę 101011,11012  zapisaną w zapisie binarnym z częścią ułamkową na system dziesiętny.
+
 Rozwiązanie:
 Sposób 1:
 101011,11012=1*25+0*24+1*23+0*22+1*21+1*20+1*2-1+1*2-2+0*2-3+1*2-4= 32+8+2+1+0,5+0,25+0,0625=43,812510
+
 Sposób 2 (z użyciem kalkulatora):
 Zamieniamy część przed przecinkiem: 1010112=4310
 Zamieniamy część po przecinku: 11012=1310
 101011,11012=43+13/24=43+13/16=43,812510 – uwaga: 13 dzielimy przez 2 do potęgi 4, bo po przecinku w zapisie binarnym mamy 4 cyfry
+
 Przykład 2
 Zamień liczbę dziesiętną 123,87510na system binarny.
 Rozwiązanie:
@@ -22,12 +26,14 @@ Rozwiązanie:
 1:2=0r1
 Wykonujemy dzielenie z resztą do momentu, gdy otrzymamy wynik dzielenia 0. Następnie czytamy reszty z dzielenia od dołu do góry.
 12310=11110112
+
 W celu zamiany części ułamkowej z systemu dziesiętnego na binarny mnożymy  przez 2 część po przecinku i bierzemy cyfry przed przecinkiem do wyniku (od góry do dołu). Mnożenie kończymy, gdy otrzymamy 1, żądaną dokładność lub liczby zaczną się powtarzać, co oznacza ułamek okresowy.
 0,87510=0,1112
 0,875*2=1,750 – cyfra 1
 0,75*2=1,5 – cyfra 1
 0,5*2=1,0 – cyfra 1
 Odp. 123,87510=1111011,1112
+
 Przykład 3
 Zamień liczbę dziesiętną 0,310na system binarny
 0,3*2=0,6 – cyfra 0
@@ -37,18 +43,22 @@ Zamień liczbę dziesiętną 0,310na system binarny
 0,8*2=1,6 – cyfra 1
 0,6*2=1,2 – cyfra 1 (zaczyna się powtarzać)
 0,310=0,0(1001)2
+
 Przykład 4
 Zamień liczbę 23410 na system binarny, a następnie z binarnego na ósemkowy i szesnastkowy.
 Rozwiązanie:
 23410= 111010102= EA16grupujemy po 4 cyfry (od końca), bo 24=16 i każdą grupę 4 cyfr binarnych zamieniamy na liczbę w zapisie szesnastkowym
 23410= 111010102= 3528grupujemy po 3 cyfry (od końca) bo 23=8 i każdą grupę 3 cyfr binarnych zamieniamy na liczbę w zapisie ósemkowym
+
 Przykład 5
 Zamień liczbę 21012103 na system o podstawie 9.
 1012103=2 10 12 103=23539 - grupujemy po 2 cyfry (od końca), bo 32=9 i każdą grupę cyfr zapisaną w systemie trójkowym zamieniamy na jedną cyfrę w systemie o podstawie 9
+
 Zadanie 1.
 Zamień liczby rzeczywiste w zapisie binarnym na system dziesiętny.
     a) 101,01012 = 1*22+0*21+1*20+0*2-1+1*2-2+0*2-3+1*2-4= 5+0,25
     b) 10111,00112 = 23+3/16=23,187510
+
 Zadanie 2
 Zamień podane liczby dziesiętne na system binarny.
     a) 43,2510 = 101011,0110
@@ -78,22 +88,27 @@ Zamień podane liczby dziesiętne na system binarny.
 0,6*2=1,2 cyfra 1
 0,2*2=0,4 cyfra 0 
 
-
     e) 13,410
 Zadanie 3
 Zamień podane liczby na system binarny, a następnie z binarnego na ósemkowy i szesnastkowy.
     a) 53210
     b) 8410
     c) 14910
+
 Zadanie 4
 Zamień liczbę 2103232014 na system heksadecymalny.
+
 Zadanie 5
 Zamień liczbę EA19C037D16 na system o podstawie 4.
+
 Zadanie 6
 Napisz program, który zamieni liczbę binarną podaną jako napis z częścią ułamkową po przecinku na system dziesiętny (nie korzystając z funkcji wbudowanej int).
+
 Zadanie 7
 Napisz program, który zamieni liczbę całkowitą dziesiętną na liczbę w zapisie binarnym nie korzystając z funkcji konwersji podanej liczby dziesiętnej na napis oraz funkcji wbudowanej bin.
+
 Zadanie 8
 Zmodyfikuj poprzedni program tak, aby możliwa była również konwersja liczb dziesiętnych z częścią ułamkową na system binarny. Wynik podaj z dokładnością do 15 cyfr po przecinku.
+
 Zadanie 9
 Wykonaj zadanie 14 z informatora o egzaminie maturalnym z informatyki 2023
